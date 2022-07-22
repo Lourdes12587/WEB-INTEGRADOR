@@ -1,0 +1,394 @@
+@font-face {
+    font-family: "orbitron";
+    src: url(Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(Raleway-Regular.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "orbitron";
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    color: black;
+}
+
+.section-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-image: url(keyboard-gc1e1d6820_1920.jpg);
+    height: 100%;
+}
+
+/*menu*/
+
+.header{
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+    background-color: blueviolet;
+
+}
+
+.logo-container{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    margin-left: 10%;
+}
+
+.navbar, 
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-list{
+    gap:5%;
+}
+.navbar a{
+    color: black;
+}
+.navbar-list li:last-child >a {
+    border: 1px solid black;
+    font: 14px;
+    padding: 8px 48px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+
+}
+
+.navbar-list li:last-child > a:hover {
+    background-color: lightsteelblue;
+    color: black;
+    transition: all 0.3s linear;
+   
+}
+
+.navbar i{
+    font-size:40px;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu{
+    display: none;
+}
+
+@media (max-width: 992px){
+    .header{
+        padding: 0px 50px 0px 90px;
+    }
+
+    .navbar i{
+        display: flex;
+    }
+    
+    .navbar-list{
+        position: absolute;
+        background-color: white;
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh-100px);
+        z-index:9999;
+        display: none;
+    }
+
+    #toggle-menu:checked + .navbar-list{
+        display: flex;
+    }
+}
+
+/*Inicio*/
+
+#inicio{
+    flex-wrap: wrap;
+    flex: 1 1 50%;
+    gap: 40px,
+}
+
+.description-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+.text-container{
+    width: 200%;
+    gap: 20%;
+}
+
+.text-container img{
+    width: 30%;
+}
+
+.text-container h1{
+    font-size: 1,2em;
+    margin-bottom: 20px;
+}
+
+.text-container p{
+    font-size: 1,2em;
+    width: 150%;
+    margin-bottom: 20px;
+}
+
+button{
+    background-color: blueviolet;
+    border: 0px solid black;
+    width: 180px;
+    height: 40px;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all o.4s ease-out;
+}
+
+button:hover{
+    background-color: black;
+    color: lightsteelblue;
+    transition: all 0.4s ease-in;
+}
+
+
+@media (max-width: 768px){
+    description-container{
+        justify-content: center;
+        align-items: center;
+    }
+    text-container{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*NOSOTROS*/
+
+.seccion-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: lightsteelblue;
+    
+}
+
+.seccion-nosotros h2{
+    margin: 0;
+    padding: 0;
+    font-family: "orbitron";
+    margin-bottom: 5%;
+
+}
+
+.container-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 5%;
+    
+  }
+
+.container-info img{
+    width: 100%;
+    height: 50%;
+    border-radius: 5%;
+} 
+
+.container-info p {
+    display: flex;
+    display: inline-block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    color:black;
+  }
+  
+.container-info h4 {
+    font-size: 1em;
+    display: flex;
+    display: inline-block;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: black;
+  }
+ 
+.cuadrado1 {
+    width: 25%;
+    height:100%;
+    background-color: blueviolet;
+    background-position: center;
+    border-radius: 5%;
+    
+  }
+
+.cuadrado2 {
+    width: 25%;
+    height: 100%;
+    background-color: blueviolet;
+    background-position: center;
+    border-radius: 5%;
+
+  }
+  
+.cuadrado3 {
+    width: 25%;
+    height: 100%;
+    background-color: blueviolet;
+    background-position: center;
+    border-radius: 5%;
+    
+  }
+
+/*SERVICIOS*/
+
+.seccion-info {
+    background-color: lightsteelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "orbitron";
+}
+
+.seccion-info h2{
+    margin-top:50px;
+}
+
+.container-servicios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: lightsteelblue;
+    font-family: "orbitron";
+    
+}
+
+.container-img-serv {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 80px;
+}
+
+.container-img-serv img {
+    width: 80%;
+    padding: 0;
+}
+.container-img-serv h4 {
+    padding: 0;
+}
+
+.container-img-serv:hover {
+    background: hsla(283, 64%, 42%, 1);
+}
+
+
+/*FOOTER*/
+
+.footer{
+    width: 100%;
+    background-color: blueviolet;
+
+}
+.footer .seccion-footer{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:50px;
+    padding: 45px 0p;
+}
+
+.footer .seccion-footer .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .seccion-footer img{
+    width: 150px;
+}
+
+.footer .seccion-footer .box h3{
+    color:black;
+    font-family: "Raleway";
+    margin-bottom: 27px;
+    font-size: 20px;
+}
+
+.footer .seccion-footer .box h4{
+    color: black;
+    font-family: "Raleway";
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.footer .box .fa-brands i{
+    display: inline-block;
+    width: 45%;
+    height: 45%;
+    line-height: 45%;
+    margin-right: 10px;
+    background-color: #0d2033;
+
+}
+
+.container-footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-size: 0.7em;
+    font-family: "Raleway";
+}
+
